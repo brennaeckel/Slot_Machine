@@ -114,3 +114,33 @@ class TripleString
 	}
 	
 }
+static String randString()
+{
+      
+    String randStr;
+      
+    //generate a random integer in the range from 0 to 999
+    Random randomGenerator = new Random(); 
+    int randInt = randomGenerator.nextInt(1000);    
+      
+    //assign string value to random number according to probabilities: 
+    //50% "BAR", 25% "cherries", 12.5% "space", 12.5% "7"
+    if (randInt < 500)
+    {
+	    randStr = "BAR";
+    }
+    else if (randInt >= 500 && randInt < 750)
+    {
+       randStr = "cherries";
+    }
+    else if (randInt >= 750 && randInt < 875)
+    {
+       randStr = "space";
+    }
+    else
+    {
+       randStr = "7";
+    }
+    return randStr;  
+
+}
